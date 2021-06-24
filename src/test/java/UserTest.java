@@ -13,14 +13,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class UserTest extends TestBase {
 
     @Test
-    public void whenGetRequest_thenCorrect() {
+    public void getHello() {
         final String url = "https://playground.learnqa.ru/api/hello";
         Response response = apiMethods.makeGetRequest(url);
         assertEquals(200, response.code());
     }
 
     @Test
-    public void whenGetRequest_thenCorrect2() throws IOException {
+    public void createNewUser() throws IOException {
         final String url = "https://playground.learnqa.ru/api/user/";
         long currentTime = new Date().getTime();
         RequestBody formBody = new FormBody.Builder()
